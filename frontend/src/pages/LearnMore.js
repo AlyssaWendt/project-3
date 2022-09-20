@@ -1,9 +1,12 @@
 import React from 'react'
+import General from '../components/General'
+import Spread from '../components/Spread'
 
 export default function LearnMore() {
   return (
     <div>
-    <h1>LearnMore</h1>
+    <General />
+    <Spread />
     </div>
   )
 }

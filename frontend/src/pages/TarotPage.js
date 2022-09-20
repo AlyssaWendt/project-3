@@ -5,14 +5,20 @@ import { useParams } from 'react-router-dom'
 export default function TarotPage() {
     let tarotCards = useParams()
    
-
+    const options = {
+      method: 'GET',
+      headers: {
+        'X-RapidAPI-Key': '27b2fcd65amshd9e52ce4afe7f43p129f81jsn5b961c0c2dc4',
+        'X-RapidAPI-Host': 'tarot-api.p.rapidapi.com'
+      }
+    };
     const [cards, setCards] = useState(null);
     const getCards = async () => {
-        const response = await fetch('https://tarot-api.p.rapidapi.com/all-cards');
+        const response = await fetch('https://tarot-api.p.rapidapi.com/all-cards', options);
         const data = await response.json();
-        console.log(tarotCards.id)
-        console.log(data.results[tarotCards])
-        setCards(data.results[tarotCards.id]);
+        console.log(tarotCards)
+        //console.log(data.results[tarotCards])
+        setCards(data[tarotCards.name]);
       };
       useEffect(() => {
         getCards();
@@ -23,10 +29,10 @@ export default function TarotPage() {
         return (
           <div>
             <h1>{cards.name} </h1>
-            <img src={cards.img} alt={cards.img}/>
+            <p><strong>Upright Meaning:</strong> {cards.meaning_up} </p>
+            <p><strong>Reversed Meaning:</strong> {cards.meaning_rev}</p>
+            <h3>Card Description</h3>
             <p>{cards.desc}</p>
-            <p>{cards.meaning_up} </p>
-            <p> {cards.meaning_rev}</p>
           </div>
         );
       };
@@ -39,3 +45,4 @@ export default function TarotPage() {
       // if cards has data, run the loaded function, otherwise, run loading
       return cards ? loaded() : loading();
     };
+    

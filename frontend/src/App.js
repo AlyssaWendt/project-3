@@ -10,6 +10,7 @@ import LearnMore from './pages/LearnMore';
 
 
 function App() {
+
   return (
         <div className='App'>
         <Nav />
@@ -17,7 +18,7 @@ function App() {
         <Routes>
         <Route path="/" element={<Home/>} />
         <Route path='/tarot' element={<TarotList/>} />
-        <Route path="/tarot/:id" element={<TarotPage/>} />
+        <Route path="/tarot/:name" element={<TarotPage/>} />
         <Route path='/learn-more' element={<LearnMore/>} />
         </Routes>
         
