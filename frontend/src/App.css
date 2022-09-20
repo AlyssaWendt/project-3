@@ -1,0 +1,24 @@
+body{
+  background-color: #fff8e4ff;
+}
+
+.Nav{
+  display: flex;
+  justify-content: center;
+  justify-content: space-evenly;
+  background-color: #521136a8;
+  
+}
+.link {
+  color: #fff8e4ff;
+}
+.link:hover {
+   color: rgb(111, 0, 255)
+}
+
+
+.Home{
+  display: grid;
+  justify-content: center;
+  text-align: center;
+}
