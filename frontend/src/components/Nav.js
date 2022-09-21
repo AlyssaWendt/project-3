@@ -8,11 +8,11 @@ function Navigation() {
   return (
     <>
       <Navbar className="Nav" sticky="top">
-        <Container>
+        <Container className='container'>
           <Navbar.Brand className='link'href="/">Quick Tarot</Navbar.Brand>
           <Nav className="me-auto">
-            <Nav.Link className='link' href="/tarot">Tarot</Nav.Link>
-            <Nav.Link className="link" href="/learn-more">Learn More</Nav.Link>
+            <Nav.Link className='link-2' href="/tarot">Tarot</Nav.Link>
+            <Nav.Link className="link-2" href="/learn-more">Learn More</Nav.Link>
           </Nav>
         </Container>
       </Navbar>

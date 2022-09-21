@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-
 import { useParams } from 'react-router-dom'
+//import Tarot from '../models/Tarot'
 
 export default function TarotPage() {
     let tarotCards = useParams()
@@ -16,8 +16,8 @@ export default function TarotPage() {
     const getCards = async () => {
         const response = await fetch('https://tarot-api.p.rapidapi.com/all-cards', options);
         const data = await response.json();
-        console.log(tarotCards)
-        //console.log(data.results[tarotCards])
+        //console.log(tarotCards)
+        //console.log(data[tarotCards])
         setCards(data[tarotCards.name]);
       };
       useEffect(() => {
@@ -25,9 +25,9 @@ export default function TarotPage() {
         // eslint-disable-next-line
     },[]);
     const loaded = () => {
-        console.log(cards);
+        //console.log(cards);
         return (
-          <div>
+          <div className="show">
             <h1>{cards.name} </h1>
             <p><strong>Upright Meaning:</strong> {cards.meaning_up} </p>
             <p><strong>Reversed Meaning:</strong> {cards.meaning_rev}</p>

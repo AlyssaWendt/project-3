@@ -4,7 +4,7 @@ import Spread from '../components/Spread'
 
 export default function LearnMore() {
   return (
-    <div>
+    <div className='learn-more'>
     <General />
     <Spread />
     </div>

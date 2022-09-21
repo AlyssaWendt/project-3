@@ -12,7 +12,7 @@ export default function General() {
   to a particular moments in history, which both limited and inspired them.
     </p>
     <br/>
-    <h3>Origins</h3>
+    <h2>Origins</h2>
     <p>The ancestors of what we today know as Tarot cards can be traced back to around the late fourteenth century. 
       Artists in Europe created the first playing cards, which were used for games, and featured four different suits. 
       These suits were similar to what we still use today  staves or wands, discs or coins, cups, and swords. 
@@ -26,8 +26,17 @@ export default function General() {
       <br/>
       Because not everyone could afford to hire a painter to create a set of cards for them,
       for a few centuries, customized cards were something only a privileged few could own. 
-      t wasn't until the printing press came along that playing card decks could be mass-produced for the average game-player.
+      it wasn't until the printing press came along that playing card decks could be mass-produced for the average game-player.
        </p>
+      <br/>
+      <br/>
+      <h2>But who do you do a Tarot Reading..</h2>
+      <p>
+      We know Tarot is a modality that helps us gain greater insight into our current situations, honor our intuition and forecast potential outcomes. It might seem a bit daunting, but it’s really a simple process. I’ll walk you through it.
+      </p>
+      <br/>
+      <h3>1. Find a quiet space</h3>
+      
     </div>
   )
 }
