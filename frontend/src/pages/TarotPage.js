@@ -8,8 +8,8 @@ export default function TarotPage() {
     const options = {
       method: 'GET',
       headers: {
-        'X-RapidAPI-Key': '27b2fcd65amshd9e52ce4afe7f43p129f81jsn5b961c0c2dc4',
-        'X-RapidAPI-Host': 'tarot-api.p.rapidapi.com'
+        'X-RapidAPI-Key': apiKey,
+        'X-RapidAPI-Host': apiHost
       }
     };
     const [cards, setCards] = useState(null);
@@ -30,7 +30,7 @@ export default function TarotPage() {
         return (
           <div className="show">
             <h1>{cards.name} </h1>
-            <img src={image} />
+            <img src={image} className="show-image"/>
             <p><strong>Upright Meaning:</strong> {cards.meaning_up} </p>
             <p><strong>Reversed Meaning:</strong> {cards.meaning_rev}</p>
             <h3>Card Description</h3>
