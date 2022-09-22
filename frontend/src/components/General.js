@@ -4,6 +4,7 @@ export default function General() {
   return (
     <div className='General'>
     <h1>What is Tarot?</h1>
+    <img src='https://i.imgur.com/Iu8vnn2.png' alt="Learn"/>
     <p><strong>Tarot is a Spiritual Tool</strong> that guides us to profound insight. the cards prompt our creativity and our 
       creativity and our connection to ourselves, other, earth, and the divine. Tarot helps us experience the 
   boundlessness of life. While the tarot shines a light on the spiritual experiences of 
@@ -12,7 +13,7 @@ export default function General() {
   to a particular moments in history, which both limited and inspired them.
     </p>
     <br/>
-    <h2>Origins</h2>
+    <h2 className='h2'>Origins</h2>
     <p>The ancestors of what we today know as Tarot cards can be traced back to around the late fourteenth century. 
       Artists in Europe created the first playing cards, which were used for games, and featured four different suits. 
       These suits were similar to what we still use today  staves or wands, discs or coins, cups, and swords. 
@@ -36,6 +37,22 @@ export default function General() {
       </p>
       <br/>
       <h3>1. Find a quiet space</h3>
+      <p>When doing a Tarot reading it's important to find a quiet can calm space. Many people create alters and conduct cleansing rituals to ready their space. 
+        You welcomed to do this but it's not required. Just make sure you have a place that you can really sit and reflect on your reading
+      </p>
+      <h3>2. Shuffle your Cards</h3>
+      <p>
+      Take a few deep breaths in through your nose and exhale through your mouth. 
+      As you do this practice, think about your question or what you need
+      guidance with while keeping your mind and heart open to whatever answers may come through the cards. 
+      Once you feel ready, open your eyes and shuffle the deck, again thinking about your desired query. 
+      Remember, there is no wrong way to shuffle. However you feel comfortable shuffling your deck is how to shuffle.
+      </p>
+      <h3>3. Interprating your Cards</h3>
+      <p>There's no right or wrong-just your interpretation. The key is to stay as calm 
+      and focused as you can to fully connect with your intuitive abilities by way of the cards. 
+      If you're drawing a complete blank about how a certain card relates to your question, check your deck's reference book for guidance on card meanings
+      or use  <a href='/tarot'>THIS SITE!</a> that's what it's here for.</p>
       
     </div>
   )

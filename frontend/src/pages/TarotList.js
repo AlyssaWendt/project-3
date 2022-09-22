@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from "react-router-dom";
+import Images from "../models/Tarot.json"
+import Card from 'react-bootstrap/Card';
+import { Link} from 'react-router-dom';
+import Button from 'react-bootstrap/Button';
 
 export default function TarotList() {
   const [ tarot, setTarot ] = useState('')
@@ -13,10 +16,10 @@ export default function TarotList() {
   };
 
   async function getTarot() {
-    const response = await fetch( 'https://tarot-api.p.rapidapi.com/all-cards',options);
-    const data = await response.json();
-    console.log(data)
-    setTarot(data);
+   /// const response = await fetch( 'https://tarot-api.p.rapidapi.com/all-cards',options);
+    //const data = await response.json();
+    //console.log(data)
+    setTarot([]);
   }
   useEffect(() => {
     getTarot();
@@ -28,19 +31,36 @@ export default function TarotList() {
 
 <div className="tarot">
 {tarot.map((card, id) => {
+    const image = Images.find(i =>{
+        return i.name === card.name
+        if (true){
+          return i.image
+        }
+      })
+    console.log(image)
      const cards = {
          name: card.name,
-        img: card.img
+        img: 'asdf'
      }
-    cards.key = cards.name
+    cards.key = cards.name.replace(/\s+/g, '');
     //console.log(cards);
 
+
     return (
-        <Link  to={`${id}`}>
-            <p>{cards.name}</p>
-        </Link>
-       
+        <Card style={{ width: '18rem' }}>
+        <Card.Img variant="top" src={cards.img} />
+        <Card.Body>
+          <Card.Title>{cards.name}</Card.Title>
+        </Card.Body>
+        <Card.Body>
+          <Link to={`${id }`}>
+          <Button variant="primary">Full Meaning</Button>
+          </Link>
+        </Card.Body>
+      </Card> 
+     
     );
+
 })} 
 
 </div>
