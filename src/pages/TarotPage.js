@@ -8,8 +8,8 @@ export default function TarotPage() {
     const options = {
       method: 'GET',
       headers: {
-        'X-RapidAPI-Key': apiKey,
-        'X-RapidAPI-Host': apiHost
+        'X-RapidAPI-Key': process.env.apiKey,
+        'X-RapidAPI-Host': process.env.apiHost
       }
     };
     const [cards, setCards] = useState(null);

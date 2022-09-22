@@ -10,8 +10,8 @@ export default function TarotList() {
   const options = {
     method: 'GET',
     headers: {
-      'X-RapidAPI-Key': '27b2fcd65amshd9e52ce4afe7f43p129f81jsn5b961c0c2dc4',
-      'X-RapidAPI-Host': 'tarot-api.p.rapidapi.com'
+      'X-RapidAPI-Key': process.env.apiKey,
+      'X-RapidAPI-Host': process.env.apiHost
     }
   };
 
