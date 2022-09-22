@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams } from 'react-router-dom'
-//import Tarot from '../models/Tarot'
+import Images from '../models/Tarot'
 
 export default function TarotPage() {
     let tarotCards = useParams()
@@ -25,10 +25,12 @@ export default function TarotPage() {
         // eslint-disable-next-line
     },[]);
     const loaded = () => {
+      const image = Images[cards.name ]?.image|| "https://picsum.photos/300/300"
         //console.log(cards);
         return (
           <div className="show">
             <h1>{cards.name} </h1>
+            <img src={image} />
             <p><strong>Upright Meaning:</strong> {cards.meaning_up} </p>
             <p><strong>Reversed Meaning:</strong> {cards.meaning_rev}</p>
             <h3>Card Description</h3>
