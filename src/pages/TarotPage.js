@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams } from 'react-router-dom'
 import Images from '../models/Tarot'
 
+
 export default function TarotPage() {
     let tarotCards = useParams()
    
