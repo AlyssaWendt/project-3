@@ -2,9 +2,10 @@
 <h1 align="center">Quick Tarot</h1>
 
 
-<h3 align="left">Languages and Tools:</h3>
-<table width="320px">
+<h3 align="center">Languages and Tools:</h3>
+<table align="center" width="320px">
     <tbody>
+    <tr valign="top">
             <td width="80px" align="center">
             <span><strong>JavaScript</strong></span><br>
             <img height="32" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg">
@@ -13,8 +14,6 @@
             <span><strong>CSS</strong></span><br>
             <img height="32px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg">
             </td>
-        </tr>
-        <tr valign="top">
             <td width="80px" align="center">
             <span><strong>React</strong></span><br>
             <img height="32px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg">
@@ -59,14 +58,17 @@ My app is called Quick Tarot.  It's a tarot app for people just getting started 
 
 ### MVP User Stories
 
-List the user stories that will be required to support your project MVP.  Optionally, you may list post MVP (stretch goals) under a separate heading.
 
 - As a user, I want to see a listing of all of the Tarot cards in a standard deck.
+![List](https://i.imgur.com/493NSHV.png)
 
 - As a user, I would like to click on the Full Meaning button underneath to view a description of the card, the upright meaining and the reversed meaning.
+![Point](https://i.imgur.com/ATfIpO7.png)
+![Show](https://i.imgur.com/Xq1Kwcp.png)
 
 - As a user, I would like a editional page that gives some general informaiotn on how to start reading tarot and a basic 3 card spread. 
 
+![Learning](https://i.imgur.com/OGiRDLN.png)
 
 ## Component Hierarchy
 
@@ -103,3 +105,15 @@ https://rapidapi.com/ther3born0/api/tarot-api
 - Adding a search form.
 
 - Continuing to add more styling 
+
+
+### Code 
+
+```
+{tarot.map((card, id) => {
+  const image = Images[card.name]?.image|| "https://picsum.photos/300/300"
+     const cards = {
+         name: card.name,
+        img: image
+     }
+```
