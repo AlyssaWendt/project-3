@@ -37,8 +37,7 @@ Deployed Website : https://quicktarot.herokuapp.com/tarot
 
 ## Project Description
 
-My app is called Quick Tarot.  It's a tarot app for people just getting started or need a quick reference for basic tarot card meaning.  Users can see a list of all of the Tarot  with a description of the card and the upright/reversed meaning.  In the future, I'd like to add a feature so that users can to a virtual 3 card reading and journal about that reading.
-
+My app is called Quick Tarot.  It's a tarot app for people just getting started or need a quick reference for basic tarot card meaning.  Users can see a list of all of the Tarot  with a description of the card and the upright/reversed meaning. 
 
 ## Wireframes
 
