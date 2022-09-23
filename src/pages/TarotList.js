@@ -10,7 +10,7 @@ export default function TarotList() {
   const options = {
     method: 'GET',
     headers: {
-      'X-RapidAPI-Key': process.env.apiKey,
+      'X-RapidAPI-Key': 'dbaaa5cb84msh033f5599e6bc87ap10003ejsn41e139076ac5',
       'X-RapidAPI-Host': "tarot-api.p.rapidapi.com" 
     }
   };
@@ -18,7 +18,6 @@ export default function TarotList() {
   async function getTarot() {
     const response = await fetch( 'https://tarot-api.p.rapidapi.com/all-cards',options);
     const data = await response.json();
-    console.log(data)
     setTarot(data);
   }
   useEffect(() => {
