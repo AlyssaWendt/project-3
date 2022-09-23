@@ -11,7 +11,7 @@ export default function TarotList() {
     method: 'GET',
     headers: {
       'X-RapidAPI-Key': process.env.apiKey,
-      'X-RapidAPI-Host': process.env.apiHost
+      'X-RapidAPI-Host': "tarot-api.p.rapidapi.com" 
     }
   };
 
@@ -31,15 +31,12 @@ export default function TarotList() {
 
 <div className="tarot">
 {tarot.map((card, id) => {
-  const image = Images[card.name ]?.image|| "https://picsum.photos/300/300"
-  console.log(image)
+  const image = Images[card.name]?.image|| "https://picsum.photos/300/300"
      const cards = {
          name: card.name,
         img: image
      }
     cards.key = cards.name.replace(/\s+/g, '');
-    console.log(cards);
-
 
     return (
       <div className='grid-wrapper'>
@@ -65,7 +62,7 @@ const loading = () => {
     return (<h1>Loading...</h1>);
   };
 
-  // if tarot has data, run the loaded function, otherwise, run loading
+  
 return tarot ? loaded() : loading();
 }
 

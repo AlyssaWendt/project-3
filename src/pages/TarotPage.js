@@ -16,8 +16,6 @@ export default function TarotPage() {
     const getCards = async () => {
         const response = await fetch('https://tarot-api.p.rapidapi.com/all-cards', options);
         const data = await response.json();
-        //console.log(tarotCards)
-        //console.log(data[tarotCards])
         setCards(data[tarotCards.name]);
       };
       useEffect(() => {
@@ -25,12 +23,12 @@ export default function TarotPage() {
         // eslint-disable-next-line
     },[]);
     const loaded = () => {
+     
       const image = Images[cards.name ]?.image|| "https://picsum.photos/300/300"
-        //console.log(cards);
         return (
           <div className="show">
             <h1>{cards.name} </h1>
-            <img src={image} className="show-image"/>
+            <img src={image} className="show-image" alt="show-pic"/>
             <p><strong>Upright Meaning:</strong> {cards.meaning_up} </p>
             <p><strong>Reversed Meaning:</strong> {cards.meaning_rev}</p>
             <h3>Card Description</h3>
