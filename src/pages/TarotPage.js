@@ -10,7 +10,7 @@ export default function TarotPage() {
       method: 'GET',
       headers: {
         'X-RapidAPI-Key': '341200c68bmshf3028e7a16cc7e3p145209jsn6e7b33fd36f5',
-        'X-RapidAPI-Host': 'tarot-api.p.rapidapi.com'
+        'X-RapidAPI-Host': "tarot-api.p.rapidapi.com "
       }
     };
     const [cards, setCards] = useState(null);
