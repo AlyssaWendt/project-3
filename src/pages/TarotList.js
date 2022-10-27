@@ -33,7 +33,7 @@ export default function TarotList() {
 {tarot.map((card, id) => {
   const image = Images[card.name]?.image|| "https://picsum.photos/300/300"
      const cards = {
-         name: card.name,
+        name: card.name,
         img: image
      }
     cards.key = cards.name.replace(/\s+/g, '');
